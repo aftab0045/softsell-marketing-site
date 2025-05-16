@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
+
     <section className="relative bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -16,6 +17,7 @@ const HeroSection = () => {
             <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <a 
                 href="#contact" 
+                
                 className="btn-primary inline-flex items-center group"
               >
                 Sell My Licenses

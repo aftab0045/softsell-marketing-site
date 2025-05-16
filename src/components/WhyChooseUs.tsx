@@ -6,6 +6,7 @@ const WhyChooseUs = () => {
     {
       icon: <Award size={28} />,
       title: "Competitive Offers",
+
       description: "We guarantee the best market rates for your software licenses"
     },
     {
@@ -14,6 +15,7 @@ const WhyChooseUs = () => {
       description: "End-to-end encryption and secure payment processing"
     },
     {
+
       icon: <FastForward size={28} />,
       title: "Fast Processing",
       description: "Get paid within 48 hours of accepting our offer"
@@ -27,7 +29,7 @@ const WhyChooseUs = () => {
 
   return (
     <section id="why-choose-us" className="py-20 bg-softsell-gray dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+       <div className="container mx-auto px-4">
         <h2 className="section-title">Why Choose Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => (

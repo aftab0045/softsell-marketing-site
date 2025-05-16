@@ -30,7 +30,9 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
+    
+
+
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -43,8 +45,11 @@ const ContactForm = () => {
       newErrors.name = 'Name is required';
     }
     
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
+
+
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
@@ -52,12 +57,17 @@ const ContactForm = () => {
     if (!formData.company.trim()) {
       newErrors.company = 'Company is required';
     }
+
+    
     
     if (!formData.licenseType) {
+
       newErrors.licenseType = 'Please select a license type';
     }
     
     setErrors(newErrors);
+
+
     return Object.keys(newErrors).length === 0;
   };
 
@@ -68,15 +78,20 @@ const ContactForm = () => {
     
     setIsSubmitting(true);
     
-    // Simulate form submission
+
+
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
+
       toast.success("Form submitted successfully! We'll be in touch soon.");
       
-      // Reset form after 3 seconds
+
+
       setTimeout(() => {
         setFormData({
+          
           name: '',
           email: '',
           company: '',
