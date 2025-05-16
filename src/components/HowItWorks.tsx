@@ -21,23 +21,23 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
+    <section id="how-it-works" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="section-title">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative hover-scale">
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-200 -z-10 transform -translate-x-1/2">
-                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 -translate-x-1 rotate-45 w-3 h-3 border-t-2 border-r-2 border-gray-200"></div>
+                <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-200 dark:bg-gray-700 -z-10 transform -translate-x-1/2">
+                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 -translate-x-1 rotate-45 w-3 h-3 border-t-2 border-r-2 border-gray-200 dark:border-gray-700"></div>
                 </div>
               )}
               <div className="text-center">
                 <div className="icon-container">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <h3 className="text-xl font-bold mb-4 dark:text-white">{step.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{step.description}</p>
               </div>
             </div>
           ))}

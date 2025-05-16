@@ -26,19 +26,19 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 bg-softsell-gray">
+    <section id="why-choose-us" className="py-20 bg-softsell-gray dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Why Choose Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="feature-card group">
               <div className="flex items-start">
-                <div className="mr-4 p-3 bg-blue-100 rounded-full text-softsell-blue group-hover:bg-softsell-blue group-hover:text-white transition-colors duration-300">
+                <div className="mr-4 p-3 bg-blue-100 dark:bg-blue-900 rounded-full text-softsell-blue dark:text-blue-300 group-hover:bg-softsell-blue group-hover:text-white transition-colors duration-300">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">{feature.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
                 </div>
               </div>
             </div>

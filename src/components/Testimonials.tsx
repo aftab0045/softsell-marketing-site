@@ -19,7 +19,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Customer Testimonials</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -30,18 +30,18 @@ const Testimonials = () => {
                   <Star 
                     key={i} 
                     size={18} 
-                    className={i < (testimonial.stars || 5) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"} 
+                    className={i < (testimonial.stars || 5) ? "text-yellow-400 fill-yellow-400" : "text-gray-300 dark:text-gray-600"} 
                   />
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+              <p className="text-gray-700 dark:text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
               <div className="flex items-center">
-                <div className="bg-blue-100 text-softsell-blue rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">
+                <div className="bg-blue-100 dark:bg-blue-900 text-softsell-blue dark:text-blue-300 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-bold">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                  <p className="font-bold dark:text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}, {testimonial.company}</p>
                 </div>
               </div>
             </div>
