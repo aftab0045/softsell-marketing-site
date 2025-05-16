@@ -46,7 +46,7 @@ SoftSell helps users easily sell unused software licenses. This one-page marketi
 ## 🚀 Deployment
 
 Hosted on **Vercel**  
-🔗 [Live Demo](https://softsell.vercel.app) *(replace this with your actual live site URL)*
+🔗 [Live Demo](https://softsell-marketing-site-three.vercel.app/) *(replace this with your actual live site URL)*
 
 
 
