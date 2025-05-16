@@ -42,13 +42,6 @@ SoftSell helps users easily sell unused software licenses. This one-page marketi
 
 ---
 
-## 🤖 Bonus: LLM-Powered Chat Widget
-
-- Integrated a basic **AI chat widget** using OpenAI API (or mocked)
-- Sample hardcoded questions like: “How do I sell my license?”
-- User-friendly chat UX and fallback responses
-
----
 
 ## 🚀 Deployment
 
