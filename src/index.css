@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,24 +31,17 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221 83% 53%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -61,7 +55,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -97,5 +91,44 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-shadow {
+    @apply transition-shadow duration-300 hover:shadow-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-softsell-blue text-white px-6 py-3 rounded-md font-medium hover:bg-softsell-darkBlue transition-colors duration-300 hover:shadow-md transform hover:-translate-y-1;
+  }
+
+  .icon-container {
+    @apply flex items-center justify-center h-16 w-16 rounded-full bg-softsell-blue text-white mb-4 mx-auto hover:bg-softsell-lightBlue transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-center;
+  }
+
+  .feature-card {
+    @apply p-6 rounded-lg border border-gray-100 hover:border-softsell-blue transition-all duration-300 hover:shadow-md bg-white;
+  }
+
+  .testimonial-card {
+    @apply p-6 rounded-lg border border-gray-100 bg-white hover:shadow-md transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-softsell-blue focus:border-transparent transition-all duration-300;
   }
 }
