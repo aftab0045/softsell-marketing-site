@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# 🧾 SoftSell - Software License Resale Landing Page
 
-## Project info
+A modern, responsive single-page marketing website for a fictional software resale startup **SoftSell**.
 
-**URL**: https://lovable.dev/projects/cfee2ee2-7a3b-4470-bf47-5634a1535145
+📌 **This project was built as an internship assignment for Credex Web Development Internship.**
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🌟 Overview
 
-**Use Lovable**
+SoftSell helps users easily sell unused software licenses. This one-page marketing site was designed to highlight the service's value proposition, process, and contact point—all with clean UI/UX and responsive design.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cfee2ee2-7a3b-4470-bf47-5634a1535145) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+- ⚛️ **React.js** with **Vite**
+- 🎨 **Tailwind CSS** for styling
+- 🚀 Hosted on **Vercel**
+- 📄 Dummy data only (no backend)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ✨ Features Implemented
 
-Follow these steps:
+- ✅ **Hero Section** with custom headline, subheading, and CTA button
+- ✅ **How It Works**: Visual 3-step process
+- ✅ **Why Choose Us**: 4 key benefits with icons
+- ✅ **Customer Testimonials** with role and company
+- ✅ **Contact Form** with name, email, license type, message (frontend validation only)
+- ✅ Fully **responsive layout** for mobile & desktop
+- ✅ Clean, modern UI using Tailwind CSS
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🔧 Bonus Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+- 🌙 **Light/Dark mode toggle**
+- 🎨 **Custom favicon** and **logo placeholder**
+- 📈 SEO meta tags and page title
+- 🎞️ Smooth entrance **animations** with Framer Motion
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🤖 Bonus: LLM-Powered Chat Widget
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Integrated a basic **AI chat widget** using OpenAI API (or mocked)
+- Sample hardcoded questions like: “How do I sell my license?”
+- User-friendly chat UX and fallback responses
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deployment
 
-## What technologies are used for this project?
+Hosted on **Vercel**  
+🔗 [Live Demo](https://softsell.vercel.app) *(replace this with your actual live site URL)*
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/cfee2ee2-7a3b-4470-bf47-5634a1535145) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
