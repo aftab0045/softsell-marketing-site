@@ -5,6 +5,7 @@ import { Toggle } from './ui/toggle';
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Check for user's preferred color scheme or saved preference
   useEffect(() => {
@@ -17,8 +18,10 @@ const ThemeToggle = () => {
     }
   }, []);
 
-  // Toggle between light and dark mode
+  // Toggle between light and dark mode with animation
   const toggleTheme = () => {
+    setIsAnimating(true);
+    
     if (isDarkMode) {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
@@ -26,7 +29,11 @@ const ThemeToggle = () => {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     }
-    setIsDarkMode(!isDarkMode);
+    
+    setTimeout(() => {
+      setIsDarkMode(!isDarkMode);
+      setIsAnimating(false);
+    }, 300);
   };
 
   return (
@@ -34,13 +41,30 @@ const ThemeToggle = () => {
       pressed={isDarkMode} 
       onPressedChange={toggleTheme} 
       aria-label="Toggle dark mode"
-      className="bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full p-2"
+      className={`relative bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full p-2 transition-all duration-300 ${
+        isAnimating ? 'scale-90' : 'scale-100'
+      }`}
     >
-      {isDarkMode ? (
-        <Moon size={18} className="text-gray-700 dark:text-gray-300" />
-      ) : (
-        <Sun size={18} className="text-gray-700 dark:text-gray-300" />
-      )}
+      <div className="relative">
+        {isDarkMode ? (
+          <Moon 
+            size={18} 
+            className={`text-yellow-400 transition-all duration-300 ${
+              isAnimating ? 'rotate-[360deg] scale-110' : ''
+            }`} 
+          />
+        ) : (
+          <Sun 
+            size={18} 
+            className={`text-orange-400 transition-all duration-300 ${
+              isAnimating ? 'rotate-[360deg] scale-110' : ''
+            }`} 
+          />
+        )}
+        <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity duration-200">
+          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        </span>
+      </div>
     </Toggle>
   );
 };

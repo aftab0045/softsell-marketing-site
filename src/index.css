@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -90,7 +89,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
     font-family: 'Inter', sans-serif;
   }
 
@@ -130,5 +129,25 @@
 
   .input-field {
     @apply w-full px-4 py-3 rounded-md border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-softsell-blue focus:border-transparent transition-all duration-300;
+  }
+
+  /* Theme toggle animations */
+  .theme-toggle-enter {
+    opacity: 0;
+    transform: scale(0.8) rotate(-45deg);
+  }
+  .theme-toggle-enter-active {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .theme-toggle-exit {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  .theme-toggle-exit-active {
+    opacity: 0;
+    transform: scale(0.8) rotate(45deg);
+    transition: opacity 300ms, transform 300ms;
   }
 }

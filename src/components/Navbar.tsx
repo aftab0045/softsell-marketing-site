@@ -35,14 +35,24 @@ const Navbar = () => {
             <a href="#how-it-works" className="text-gray-700 dark:text-gray-300 hover:text-softsell-blue dark:hover:text-softsell-lightBlue transition-colors">How It Works</a>
             <a href="#why-choose-us" className="text-gray-700 dark:text-gray-300 hover:text-softsell-blue dark:hover:text-softsell-lightBlue transition-colors">Why Choose Us</a>
             <a href="#testimonials" className="text-gray-700 dark:text-gray-300 hover:text-softsell-blue dark:hover:text-softsell-lightBlue transition-colors">Testimonials</a>
-            <ThemeToggle />
+            <div className="relative group">
+              <ThemeToggle />
+              <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Toggle theme
+              </span>
+            </div>
             <a href="#contact" className="btn-primary">
               Get Started
             </a>
           </div>
           
           <div className="md:hidden flex items-center gap-4">
-            <ThemeToggle />
+            <div className="relative group">
+              <ThemeToggle />
+              <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Toggle theme
+              </span>
+            </div>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
               {isMenuOpen ? <X size={24} className="dark:text-white" /> : <Menu size={24} className="dark:text-white" />}
             </button>
