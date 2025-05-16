@@ -117,18 +117,18 @@
   }
 
   .section-title {
-    @apply text-3xl font-bold mb-8 text-center;
+    @apply text-3xl font-bold mb-8 text-center dark:text-white;
   }
 
   .feature-card {
-    @apply p-6 rounded-lg border border-gray-100 hover:border-softsell-blue transition-all duration-300 hover:shadow-md bg-white;
+    @apply p-6 rounded-lg border border-gray-100 hover:border-softsell-blue transition-all duration-300 hover:shadow-md bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-white;
   }
 
   .testimonial-card {
-    @apply p-6 rounded-lg border border-gray-100 bg-white hover:shadow-md transition-all duration-300;
+    @apply p-6 rounded-lg border border-gray-100 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-white hover:shadow-md transition-all duration-300;
   }
 
   .input-field {
-    @apply w-full px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-softsell-blue focus:border-transparent transition-all duration-300;
+    @apply w-full px-4 py-3 rounded-md border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-softsell-blue focus:border-transparent transition-all duration-300;
   }
 }
